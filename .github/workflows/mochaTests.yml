@@ -18,12 +18,16 @@ jobs:
   mocha-tests:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup yarn for dependency management.
-        run: |
-          sudo apt update -y && sudo apt upgrade -y
-          sudo apt install yarn -y
+      - name: "Setup latest nodejs"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'latest'
       - uses: actions/checkout@v3
-      - name: Install the dependencies and run the test.
-        run: |
-          yarn install
-          yarn test
+      - name: "Use yarn to install the dependencies."
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - name: "Use yarn to run all the mocha tests."
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test
