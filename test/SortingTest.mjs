@@ -1,4 +1,5 @@
 import assert from 'assert';
+import { HeapSort } from "../src/Sorting/HeapSort.js";
 
 const test_data = [
   {args: [2, 1], expected: [1, 2]},

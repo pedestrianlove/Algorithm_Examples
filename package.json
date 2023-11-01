@@ -6,7 +6,7 @@
   "author": "J.S.LI <j.s.li@gapp.nthu.edu.tw>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha"
+    "test": "tsc && mocha"
   },
   "dependencies": {
     "@types/node": "^20.8.10",
