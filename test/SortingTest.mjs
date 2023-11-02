@@ -24,7 +24,7 @@ describe('Sorting Algorithms', function () {
   Sorters.forEach(({name, instance}) => {
     describe(name, function () {
       for (let i = 0; i < 5; i++) {
-        const args = generateRandomIntArray(5, 1, 1000);
+        const args = generateRandomIntArray(10, 1, 1000);
         const expected = args.toSorted((a, b) => a - b);
 
         it(`correctly sort the given array: ${args} using ${name}`, function () {
