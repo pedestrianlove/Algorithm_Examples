@@ -36,12 +36,16 @@ export class HeapSort {
     HeapSort (A: Array<number>, n: number) {
 
         this.Build_Max_Heap(A, n);
-        let heap_size = n;
+        this.heap_size = n;
 
         for (let i = n-1 ; i >= 1 ; i--) {
             [A[0], A[i]] = HeapSort.swap(A[0], A[i]);
-            heap_size--;
+            this.heap_size--;
             this.Max_Heapify(A, 0);
         }
+    }
+
+    Sort (A: Array<number>) {
+        this.HeapSort(A, A.length);
     }
 }
