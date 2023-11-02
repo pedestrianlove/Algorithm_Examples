@@ -1,4 +1,6 @@
-export class HeapSort {
+import { SortingInterface } from "../SortingInterface.js";
+
+export class HeapSort implements SortingInterface {
     heap_size = 0;
 
     static swap (x: number, y: number) {

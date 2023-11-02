@@ -1,5 +1,6 @@
 import assert from 'assert';
 import { HeapSort } from "../src/Sorting/HeapSort.js";
+import { QuickSort } from "../src/Sorting/QuickSort.js";
 
 function generateRandomIntArray(size, min, max) {
   const randomIntegers = [];
@@ -14,6 +15,7 @@ function generateRandomIntArray(size, min, max) {
 
 const Sorters = [
   {name: "HeapSort", instance: new HeapSort()},
+  {name: "QuickSort", instance: new QuickSort()},
 ]
 
 describe('Sorting Algorithms', function () {
