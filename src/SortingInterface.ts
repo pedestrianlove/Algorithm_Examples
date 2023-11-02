@@ -1,3 +1,3 @@
 export interface SortingInterface {
-    Sort(A: Array<number>): void;
+    Sort(A: Array<number>): Array<number>;
 }

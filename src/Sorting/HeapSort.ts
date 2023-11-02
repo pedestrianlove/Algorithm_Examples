@@ -47,7 +47,8 @@ export class HeapSort implements SortingInterface {
         }
     }
 
-    Sort (A: Array<number>) {
+    Sort (A: Array<number>): Array<number> {
         this.HeapSort(A, A.length);
+        return A;
     }
 }

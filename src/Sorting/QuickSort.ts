@@ -29,7 +29,8 @@ export class QuickSort implements SortingInterface {
         }
     }
 
-    Sort (A: Array<number>) {
+    Sort (A: Array<number>): Array<number> {
         this.QuickSort(A, 0, A.length - 1);
+        return A;
     }
 }

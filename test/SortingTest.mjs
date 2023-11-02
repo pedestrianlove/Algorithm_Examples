@@ -1,6 +1,7 @@
 import assert from 'assert';
 import { HeapSort } from "../src/Sorting/HeapSort.js";
 import { QuickSort } from "../src/Sorting/QuickSort.js";
+import { MergeSort } from "../src/Sorting/MergeSort.js";
 
 function generateRandomIntArray(size, min, max) {
   const randomIntegers = [];
@@ -16,19 +17,22 @@ function generateRandomIntArray(size, min, max) {
 const Sorters = [
   {name: "HeapSort", instance: new HeapSort()},
   {name: "QuickSort", instance: new QuickSort()},
+  {name: "MergeSort", instance: new MergeSort()},
 ]
 
 describe('Sorting Algorithms', function () {
   Sorters.forEach(({name, instance}) => {
     describe(name, function () {
       for (let i = 0; i < 5; i++) {
-        const args = generateRandomIntArray(50, 1, 1000);
+        const args = generateRandomIntArray(5, 1, 1000);
         const expected = args.toSorted((a, b) => a - b);
 
         it(`correctly sort the given array: ${args} using ${name}`, function () {
           const sortingInstance = instance;
-          sortingInstance.Sort(args);
-          assert.deepEqual(args, expected);
+          assert.deepEqual(
+            sortingInstance.Sort(args),
+            expected
+          );
         });
       }
     });
