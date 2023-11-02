@@ -1,27 +1,34 @@
 import assert from 'assert';
 import { HeapSort } from "../src/Sorting/HeapSort.js";
 
-const test_data = [
-  {args: [2, 1], expected: [1, 2]},
-  {args: [5, 4, 3, 2, 1], expected: [1, 2, 3, 4, 5]},
-  {args: [2, 1, 3], expected: [1, 2, 3]},
-  {args: [2, 4, 1, 3], expected: [1, 2, 3, 4]},
-  {args: [2, 1, 3, 5, 6, 4, 7, 9, 8, 10], expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]},
-  {args: [2, 1, 11, 12, 3, 5, 13, 6, 4, 7, 9, 8, 10], expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]},
-]
+function generateRandomIntArray(size, min, max) {
+  const randomIntegers = [];
+
+  for (let i = 0; i < size; i++) {
+    const randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+    randomIntegers.push(randomInt);
+  }
+
+  return randomIntegers;
+}
 
 const Sorters = [
   {name: "HeapSort", instance: new HeapSort()},
 ]
 
-describe('Sorting Algorithm', function () {
+describe('Sorting Algorithms', function () {
   Sorters.forEach(({name, instance}) => {
-    test_data.forEach(({args, expected}) => {
-      it(`correctly sort the given array: ${args} using ${name}`, function () {
-        const sortingInstance = instance;
-        sortingInstance.Sort(args);
-        assert.deepEqual(args, expected);
-      });
+    describe(name, function () {
+      for (let i = 0; i < 5; i++) {
+        const args = generateRandomIntArray(50, 1, 1000);
+        const expected = args.toSorted((a, b) => a - b);
+
+        it(`correctly sort the given array: ${args} using ${name}`, function () {
+          const sortingInstance = instance;
+          sortingInstance.Sort(args);
+          assert.deepEqual(args, expected);
+        });
+      }
     });
   })
 });
