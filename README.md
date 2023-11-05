@@ -30,7 +30,8 @@ $$
 - Case 2. 平手，則 $T(n) = \Theta(n^{\log_b(a)}\log(n)) $
 - Case 3. $\log_n(f(n))$ 大，且 $af(\frac{n}{b}) = c(f(n)), c<1, n\geq n_0$ ，則 $T(n)=\Theta(f(n))$
 
-# 3. Sorting Algorithms
+# 2. Sorting Algorithms
+- 使用比較大小的排序終究無法逃脫決策樹模型的掌控，也就是 $\Omega(nlogn)$ 的限制。
 ## a. Merge Sort
 https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/MergeSort.ts#L3-L42
 ## b. Heap Sort
@@ -38,6 +39,10 @@ https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce
 ## c. Quick Sort
 https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/QuickSort.ts#L3-L36
 
-# 4. Medians and order statistics
+# 3. Medians and order statistics
 
-# 5. Binary Search Tree
+# 4. Binary Search Tree
+- 左小右大
+![圖片](https://github.com/pedestrianlove/Algorithm_Examples/assets/37164678/ab6f79f8-dc64-4d60-ab42-de54ec91bde6)
+
+- 插入
