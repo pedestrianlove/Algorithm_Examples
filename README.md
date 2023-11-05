@@ -38,6 +38,12 @@ https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce
 https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/HeapSort.ts#L3-L54
 ## c. Quick Sort
 https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/QuickSort.ts#L3-L36
+## d. Counting Sort
+
+## e. Radix Sort
+
+## f. Bucket Sort
+
 
 # 3. Medians and order statistics
 
