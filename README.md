@@ -31,6 +31,12 @@ $$
 - Case 3. $\log_n(f(n))$ 大，且 $af(\frac{n}{b}) = c(f(n)), c<1, n\geq n_0$ ，則 $T(n)=\Theta(f(n))$
 
 # 3. Sorting Algorithms
+## a. Merge Sort
+https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/MergeSort.ts#L3-L42
+## b. Heap Sort
+https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/HeapSort.ts#L3-L54
+## c. Quick Sort
+https://github.com/pedestrianlove/Algorithm_Examples/blob/214cf53e32fb7d96fc4fce7ad31f908cf89f4bf1/src/Sorting/QuickSort.ts#L3-L36
 
 # 4. Medians and order statistics
 
